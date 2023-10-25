@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .whole{
+            align-items: center;
+        }
+        h1{
+            animation-name: nick;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            animation-fill-mode: forwards;
+            transform: translateX(-10px);
+            /* short
+            animation: nick 3s linear 2s 1  forwards; */
+        }
+        @keyframes nick {
+            from{
+                transform: translateX(-300px);
+            }
+            to{
+                transform: translateX(200px);
+            }
+        }
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: fernick;
+                animation-duration: 15s;
+                text-align: center;
+        }
+
+        @keyframes fernick {
+            0%   {background-color: red;}
+            25%  {background-color: yellow;}
+            50%  {background-color: blue;}
+            100% {background-color: green;}
+        }
+        .d1{
+            height: 100px;
+            width: 100px;
+            animation-name: dass;
+            background-color: aqua;
+            animation-duration: 15s;
+            text-align: center;
+        }
+        @keyframes dass {
+                0% {
+                 transform: rotate(-45deg)
+                    }
+                 100% {
+                transform: rotate(45deg)
+                    }
+            }
+
+        .d2 {
+        width: 100px;
+         height: 100px;
+         background-color: red;
+        position: relative;
+        animation-name: example;
+        animation-duration: 15s;
+        }
+
+        @keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+        }
+      /* jump2d */
+
+      .dass{
+        height: 150px;
+        width: 120px;
+        background-color: brown;
+        animation: bounce 3s ease-in 3s 4 normal forwards;
+        transform: translate(-150px);
+      }
+
+      @keyframes bounce {
+        0%{transform: translateY(0px);}
+        40%{transform: translateY(-300px);}
+        100%{transform: translateY(-150px);}
+
+      }
+/* jump3d */
+       @keyframes jump {
+  0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+  50%  {transform: translate3d(0,30%,0) scale3d(.7,1.5,1);}
+  100% {transform: translate3d(0,100%,0) scale3d(1.5,.7,1);}
+}
+.jump {
+    height: 400px;
+    width: 360px;
+  transform-origin: 50% 50%;
+ background-image: url('../sampleimage.jpg');
+  animation: jump .5s linear alternate infinite;
+}
+    </style>
+</head>
+<body style="align-items: center;">
+    <!-- <div class="whole"> -->
+    <!-- <h1>Fernick</h1> -->
+    <!-- <div>Fernick</div> -->
+    <!-- <div class="d1">Fernick</div> -->
+    <!-- <div class="d2">DASSFERNICK</div> -->
+    <!-- <div class="dass"></div> -->
+    <div class="jump"></div>
+
+</div>
+</body>
+</html>
